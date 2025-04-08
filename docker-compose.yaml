@@ -1,0 +1,15 @@
+services:
+  test-jackett:
+    build: .
+    container_name: test-jackett
+    volumes:
+      - config:/config/
+    environment:
+      - API_KEY=202qgb6zkb3bz0siooes78cws0b9qu7c
+      - ADMIN_PASSWORD=123456
+      - INDEXERS=1337x, thepiratebay, eztv,therarbg, yts
+    ports:
+      - 9117:9117
+
+volumes:
+  config:
