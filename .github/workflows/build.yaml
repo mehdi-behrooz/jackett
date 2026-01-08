@@ -2,6 +2,7 @@ name: Build and Push Image to Github Repository
 
 on:
   push:
+  workflow_dispatch:
 
 permissions:
   contents: read
